@@ -35,6 +35,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=package-explore
+            -Dsonar.projectKey=package-explorer
              -Dsonar.organization=package-explorer
             -Dsonar.host.url=https://sonarcloud.io
