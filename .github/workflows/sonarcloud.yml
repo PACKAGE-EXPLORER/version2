@@ -3,7 +3,7 @@ name: SonarCloud
 on:
   push:
     branches:
-      - main  # Change this if your default branch is different
+      - main
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up Java
@@ -26,10 +26,10 @@ jobs:
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=package-explorer
+            -Dsonar.projectKey=PACKAGE-EXPLORER_version2
             -Dsonar.organization=package-explorer
             -Dsonar.host.url=https://sonarcloud.io
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
