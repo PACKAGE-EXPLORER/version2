@@ -36,5 +36,5 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=package-explore
-            -Dsonar.organization=PACKAGE-EXPLORER
+             -Dsonar.organization=package-explorer
             -Dsonar.host.url=https://sonarcloud.io
